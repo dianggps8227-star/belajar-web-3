@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Perpustakaan Rahadian</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Perpustakaan Rahadian</h1>
+    <p>Membaca adalah jendela dunia</p>
+  </header>
+
+  <div class="container">
+    <div class="intro">
+      <h2>Selamat Datang!</h2>
+      <p>Ini adalah situs web sederhana bertema perpustakaan yang dibuat oleh <strong>Rahadian</strong>. Di sini, kamu bisa melihat daftar buku yang tersedia untuk dibaca.</p>
+    </div>
+
+    <h3>Daftar Buku:</h3>
+    <ul class="book-list" id="bookList">
+      <li>📘 Laskar Pelangi - Andrea Hirata</li>
+      <li>📙 Bumi Manusia - Pramoedya Ananta Toer</li>
+      <li>📗 Negeri 5 Menara - Ahmad Fuadi</li>
+    </ul>
+
+    <button onclick="tambahBuku()">Tambah Buku Baru</button>
+  </div>
+
+  <footer>
+    &copy; 2025 Perpustakaan Rahadian
+  </footer>
+
+  <script>
+    function tambahBuku() {
+      const judulBaru = prompt("Masukkan judul buku baru:");
+      if (judulBaru) {
+        const daftar = document.getElementById("bookList");
+        const bukuBaru = document.createElement("li");
+        bukuBaru.textContent = "📕 " + judulBaru;
+        daftar.appendChild(bukuBaru);
+      }
+    }
+  </script>
+
+</body>
+</html>
+
